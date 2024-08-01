@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Cart Item</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Edit Cart Item</h1>
+    <form action="/editcart/<%= cartItem.cart_id %>" method="post">
+        <label for="user_id">User ID:</label>
+        <input type="number" id="user_id" name="user_id" value="<%= cartItem.user_id %>" required>
+        
+        <label for="product_id">Product ID:</label>
+        <input type="number" id="product_id" name="product_id" value="<%= cartItem.product_id %>" required>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="<%= cartItem.quantity %>" required>
+        
+        <button type="submit">Update Cart Item</button>
+    </form>
+    <a href="/cart" class="button">Back to Cart</a>
+</body>
+</html>

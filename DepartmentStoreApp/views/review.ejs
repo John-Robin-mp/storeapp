@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Reviews</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Review ID</th>
+                <th>Product Name</th>
+                <th>User Name</th>
+                <th>Review</th>
+                <th>Rating</th>
+                <th>Added At</th>
+                <th>Updated At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% reviews.forEach(review => { %>
+            <tr>
+                <td><%= review.review_id %></td>
+                <td><%= review.productName %></td>
+                <td><%= review.username %></td>
+                <td><%= review.review_description %></td>
+                <td><%= review.rating %></td>
+                <td><%= review.added_at %></td>
+                <td><%= review.updated_at %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

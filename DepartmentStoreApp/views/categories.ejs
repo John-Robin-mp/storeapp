@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Categories</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Category ID</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% categories.forEach(category => { %>
+            <tr>
+                <td><%= category.category_id %></td>
+                <td><%= category.category_description %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/" class="button">Back to Home</a>
+</body>
+</html>

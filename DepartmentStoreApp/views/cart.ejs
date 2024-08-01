@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Cart</h1>
+    <a href="/addtocart" class="button">Add to Cart</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% cartItems.forEach(item => { %>
+            <tr>
+                <td><%= item.productName %></td>
+                <td><img src="/images/<%= item.image %>" alt="<%= item.productName %>" width="50"></td>
+                <td><%= item.quantity %></td>
+                <td>$<%= item.price %></td>
+                <td>$<%= item.quantity * item.price %></td>
+                <td>
+                    <a href="/editcart/<%= item.cart_id %>" class="button">Edit</a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/" class="button">Back to Home</a>
+</body>
+</html>

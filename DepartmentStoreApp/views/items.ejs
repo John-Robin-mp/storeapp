@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Items</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item ID</th>
+                <th>User ID</th>
+                <th>Item Name</th>
+                <th>Description</th>
+                <th>Category ID</th>
+                <th>Price</th>
+                <th>Added At</th>
+                <th>Updated At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% items.forEach(item => { %>
+            <tr>
+                <td><%= item.item_id %></td>
+                <td><%= item.user_id %></td>
+                <td><%= item.item_name %></td>
+                <td><%= item.item_description %></td>
+                <td><%= item.category_id %></td>
+                <td>$<%= item.price %></td>
+                <td><%= item.added_at %></td>
+                <td><%= item.updated_at %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/" class="button">Back to Home</a>
+</body>
+</html>
